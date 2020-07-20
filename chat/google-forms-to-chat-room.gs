@@ -7,7 +7,7 @@ const ROOM_NAME = "CHAPI Sandbox";
 
 function setupTrigger() {
   ScriptApp.newTrigger('sendChatMessage')
-    .forForm('')
+    .forForm(FORM_ID)
     .onFormSubmit();
 }
 
@@ -28,7 +28,7 @@ function sendChatMessage(e) {
 }
 
 function postToChapi(payload) {
-  var options = {
+  let options = {
     'method' : 'post',
     'payload' : JSON.stringify(payload),
     'contentType': 'application/json',
