@@ -37,5 +37,5 @@ function postToChapi(payload) {
     }
   };
   
-  UrlFetchApp.fetch('https://api.8x8.com/chat/api/chat', options);
+  UrlFetchApp.fetch('https://api.8x8.com/chat/api/chat/v1/messages', options);
 }
